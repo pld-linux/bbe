@@ -2,7 +2,7 @@ Summary:	bbe - Binary block editor
 Summary(pl.UTF-8):	bbe - binarny edytor blokowy
 Name:		bbe
 Version:	0.2.2
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications/Text
 Source0:	http://dl.sourceforge.net/bbe-/%{name}-%{version}.tar.gz
