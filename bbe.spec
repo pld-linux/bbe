@@ -42,12 +42,15 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	htmldir=%{_docdir}/%{name}-%{version}
 
+# clean docdir
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
 %attr(755,root,root) %{_bindir}/bbe
 %{_mandir}/man1/bbe.*
 %{_infodir}/bbe.*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
