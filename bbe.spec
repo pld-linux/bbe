@@ -48,6 +48,12 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p	/sbin/postshell
+-/usr/sbin/fix-info-dir -c %{_infodir}
+
+%postun	-p	/sbin/postshell
+-/usr/sbin/fix-info-dir -c %{_infodir}
+
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
