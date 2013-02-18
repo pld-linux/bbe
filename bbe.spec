@@ -5,7 +5,7 @@ Version:	0.2.2
 Release:	1
 License:	GPL v2
 Group:		Applications/Text
-Source0:	http://dl.sourceforge.net/bbe-/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/bbe-/%{name}-%{version}.tar.gz
 # Source0-md5:	b056d0bfd852384aced73d4533887d4b
 URL:		http://members.surfeu.fi/tjsa/bbe/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 	htmldir=%{_docdir}/%{name}-%{version}
 
 # clean docdir
-%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
