@@ -1,0 +1,14 @@
+--- bbe-0.2.2/doc/bbe.texi.orig	2006-11-05 12:53:32.000000000 +0100
++++ bbe-0.2.2/doc/bbe.texi	2024-06-11 20:12:45.652416762 +0200
+@@ -9,9 +9,9 @@
+ @set VERSION 0.2.2
+ 
+ @ifinfo 
+-@dircategory Utilities 
++@dircategory File utilities:
+ @direntry 
+-* bbe: (bbe).                 Binary Block Editor. 
++* bbe: (bbe).				Binary Block Editor
+ @end direntry
+ @end ifinfo
+ 
