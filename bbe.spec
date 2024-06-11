@@ -5,9 +5,9 @@ Version:	0.2.2
 Release:	2
 License:	GPL v2
 Group:		Applications/Text
-Source0:	http://downloads.sourceforge.net/bbe-/%{name}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/bbe-/%{name}-%{version}.tar.gz
 # Source0-md5:	b056d0bfd852384aced73d4533887d4b
-URL:		http://members.surfeu.fi/tjsa/bbe/
+URL:		https://bbe-.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,10 +34,12 @@ nazwy pliku, offsetu i numeru bloku.
 
 %build
 %configure
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	htmldir=%{_docdir}/%{name}-%{version}
@@ -48,15 +50,15 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
 %attr(755,root,root) %{_bindir}/bbe
-%{_mandir}/man1/bbe.*
-%{_infodir}/bbe.*
+%{_mandir}/man1/bbe.1*
+%{_infodir}/bbe.info*
